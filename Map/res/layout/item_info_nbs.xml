@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#7f7f7f"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp">
+    <!-- 这个item的list请复用activity_info_msg_notify -->
+    <GridView 
+        android:id="@+id/gv_info_nbs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_info_nbs"
+        android:numColumns="2"
+        android:verticalSpacing="2dp"
+        android:horizontalSpacing="10dp"
+        android:scrollbars="none"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"></GridView>
+
+</LinearLayout>

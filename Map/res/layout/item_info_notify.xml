@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <!-- 这个item的listview 请复用 main_activity_info -->
+    
     <!-- 好友请求 -->
 
     <RelativeLayout
