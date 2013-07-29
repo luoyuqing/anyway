@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="#7f7f7f" >
+    <RelativeLayout 
+        android:id="@+id/info_msg_nbs_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/bg_info_event"
+        android:layout_marginTop="20dp">
+        <TextView 
+            android:id="@+id/info_msg_nbs_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="NBS"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+        <TextView 
+            android:id="@+id/info_msg_nbs_count_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@drawable/bg_info_event_count"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textColor="#000000"
+            android:text="3"
+            android:gravity="center"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+    
+    
+    
+    <RelativeLayout 
+        android:id="@+id/info_frilist_nbs_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/bg_info_event"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp">
+        <TextView 
+            android:id="@+id/info_frilist_nbs_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="frilist"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+        <TextView 
+            android:id="@+id/info_frilist_nbs_count_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@drawable/bg_info_event_count"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textColor="#000000"
+            android:text="3"
+            android:gravity="center"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

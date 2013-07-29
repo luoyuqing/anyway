@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="@drawable/bg_chat_more_dialog"
+	android:orientation="horizontal" >
+
+	<ImageButton
+		android:id="@+id/chat_more_img"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip"
+		android:layout_marginTop="13dip"
+		android:background="@drawable/img_btn_chatmore"
+		android:contentDescription="@string/app_name" >
+	</ImageButton>
+
+	<ImageButton
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/line_chat_more"
+		android:contentDescription="@string/app_name" />
+
+	<ImageButton
+		android:id="@+id/chat_more_face"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dip"
+		android:layout_marginTop="13dip"
+		android:background="@drawable/face_btn_chatmore"
+		android:contentDescription="@string/app_name" >
+	</ImageButton>
+
+	<ImageButton
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/line_chat_more"
+		android:contentDescription="@string/app_name" />
+
+	<ImageButton
+		android:id="@+id/chat_more_file"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip"
+		android:layout_marginTop="13dip"
+		android:background="@drawable/folder_btn_chatmore"
+		android:contentDescription="@string/app_name" >
+	</ImageButton>
+	<ImageButton
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/line_chat_more"
+		android:contentDescription="@string/app_name" />
+
+	<ImageButton
+		android:id="@+id/chat_more_location"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip"
+		android:layout_marginTop="13dip"
+		android:background="@drawable/location_btn_chatmore"
+		android:contentDescription="@string/app_name" >
+	</ImageButton> 
+
+</LinearLayout>

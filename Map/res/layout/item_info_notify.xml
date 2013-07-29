@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 这个item的listview 请复用 main_activity_info -->
+    <!-- 好友请求 -->
+
+    <RelativeLayout
+        android:id="@+id/info_notify_fri_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_info_event"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/info_notify_fri_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="请求加你为好友"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_notify_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_msg_notify"
+                android:text="yes"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/btn_notify_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/btn_msg_notify"
+                android:text="no"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 日志评论 赞 通知 -->
+
+    <RelativeLayout
+        android:id="@+id/info_notify_new_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_info_event"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/info_notify_new_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="XX评论了你的日志"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_notify_go"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_msg_notify"
+                android:text="go"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 系统通知 -->
+
+    <RelativeLayout
+        android:id="@+id/info_notify_sys_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_info_event"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/info_notify_sys_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="系统通知"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>

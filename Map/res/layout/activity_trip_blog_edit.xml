@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#efefed"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/edit_rlt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_main_title" >
+
+        <Button
+            android:id="@+id/edit_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_top_back"
+            android:text="@string/back"
+            android:textColor="#ffffff" />
+
+        <LinearLayout
+            android:id="@+id/edit_ll_centerLinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:id="@+id/edit_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="@string/trip_title_edit"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/edit_top_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_top_right"
+            android:paddingLeft="4dp"
+            android:text="@string/publish"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d5d5d5"
+        android:overScrollMode="ifContentScrolls" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/blog_edit_ll_pic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" >
+
+                    <ImageView
+                        android:id="@+id/blog_edit_gly_contentpic"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:spacing="8dp" />
+
+                    <View
+                        android:id="@+id/blog_edit_play"
+                        android:layout_width="fill_parent"
+                        android:layout_height="20dp"
+                        android:visibility="gone" >
+                    </View>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/blog_edit_ll_pic"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/bg_btn_log_playboard"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:visibility="gone" >
+
+                    <!-- 按下录音按钮，进入界面默认显示 -->
+
+                    <LinearLayout
+                        android:id="@+id/blog_edit_ll_hold_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:id="@+id/blog_edit_record_hold_to_start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/record_ic_edit_start"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/blog_edit_tv_record"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="3dp"
+                            android:text="录音"
+                            android:textColor="#296497" />
+                    </LinearLayout>
+
+                    <!-- 录完音后显示回放按钮 -->
+
+                    <LinearLayout
+                        android:id="@+id/blog_edit_ll_hold_replay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="visible" >
+
+                        <TextView
+                            android:id="@+id/blog_edit_tv_record_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="12" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="&quot;" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp" >
+
+                            <!-- 以下三个元素，根据播放状态设为可见和不可见 -->
+
+                            <ImageView
+                                android:id="@+id/blog_edit_click_to_play"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_log_click_to_play"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/blog_edit_click_to_stop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_log_click_to_stop"
+                                android:visibility="visible" />
+
+                            <ProgressBar
+                                android:id="@+id/blog_edit_pb_play"
+                                style="?android:attr/progressBarStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" >
+
+                <EditText
+                    android:id="@+id/blog_edit_et_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="64dp"
+                    android:background="@drawable/bg_frame_edittext"
+                    android:gravity="top"
+                    android:hint="@string/activ_blog_edit_content"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:scrollbars="none"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/blog_edit_tv_wordNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginBottom="2dip"
+                    android:layout_marginRight="5dip"
+                    android:gravity="center_vertical"
+                    android:text="@string/activ_blog_edit_wordnum"
+                    android:textSize="11sp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <!-- 添加表情按钮，请把监听放在linearlayout上面 -->
+
+                <LinearLayout
+                    android:id="@+id/blog_edit_ll_face"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_frame_edittext"
+                    android:padding="5dp" >
+
+                    <ImageView
+                        android:id="@+id/blog_edit_ibtn_face"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/face_btn_bloget"
+                        android:contentDescription="@string/app_name" />
+                </LinearLayout>
+
+                <!--
+                隐私设置，把监听放在layout 请根据用户选择按以下改变textview
+				<string name="activ_blog_edit_authshow">所有人可见</string>
+	            <string name="activ_blog_edit_friendhow">好友可见</string>
+	            <string name="activ_blog_edit_attentionshow">关注人可见</string>
+	            <string name="activ_blog_edit_selfshow">仅自己可见</string>
+                -->
+
+                <LinearLayout
+                    android:id="@+id/blog_edit_ll_permission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/bg_frame_edittext"
+                    android:padding="5dp" >
+
+                    <ImageView
+                        android:id="@+id/blog_edit_ibtn_permission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/permission_btn_bloget"
+                        android:contentDescription="@string/app_name" />
+
+                    <!-- 这个文字，默认是所有人可见   根据需要变为：关注的人可见，邻居可见，指定人可见 -->
+
+                    <TextView
+                        android:id="@+id/blog_edit_tv_permission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/activ_blog_edit_authshow"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!--
+                定位按钮还是请把监听放在layout上面 点下之后 imageview 图片换为btn_bloget_location_selected
+				textview 的文字改为地址信息
+                -->
+
+                <LinearLayout
+                    android:id="@+id/blog_edit_ll_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/bg_frame_edittext"
+                    android:padding="5dp" >
+
+                    <ImageView
+                        android:id="@+id/blog_edit_ibtn_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/location_btn_bloget"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/blog_edit_tv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/activ_blog_edit_location"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 以下是with列表 监听layout 如果用户选择了with的人请把其中的imageview设为btn_bloget_with_selected -->
+
+            <LinearLayout
+                android:id="@+id/blog_edit_ll_with"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_frame_edittext"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/blog_edit_ll_with_L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/blog_edit_iv_with"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/with_btn_bloget"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/blog_edit_tv_with"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="with"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <com.chance.ui.freshnews.FreshMyGridView
+                    android:id="@+id/blog_edit_gly_partener"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:numColumns="6"
+                    android:spacing="2dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!-- 以下是分享模块，没有授权的灰色图标命名为unshare_sina 授权之后要改为upload_sina -->
+
+            <LinearLayout
+                android:id="@+id/blog_edit_ll_share"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bg_frame_edittext"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:id="@+id/blog_edit_ibtn_share_sina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/unshare_sina"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/blog_edit_ibtn_share_qqweibo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/unshare_qqweibo"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/blog_edit_ibtn_share_renren"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/unshare_renren"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/blog_edit_ibtn_share_kaixin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/unshare_kaixin"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/blog_edit_ibtn_share_douban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/unshare_douban"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/blog_edit_ibtn_share_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/unshare_facebook"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/blog_edit_ibtn_share_twitter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/unshare_twitter"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

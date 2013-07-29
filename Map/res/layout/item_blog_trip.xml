@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/text_log_list_new"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="8dip"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/log_list_userimg"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/avatar_blog" >
+            </ImageView>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dip"
+                android:layout_marginTop="3dip"
+                android:layout_toRightOf="@+id/log_list_userimg"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/log_list_tv_nickname"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="left"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="我的名字"
+                    android:textColor="#171717" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/log_list_tv_nickname"
+                    android:layout_marginTop="3dip"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/ic_blog_loc" />
+
+                    <TextView
+                        android:id="@+id/log_list_tv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dip"
+                        android:layout_marginRight="2dip"
+                        android:text="四川成都"
+                        android:textColor="#87c7e1"
+                        android:textSize="12dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/log_list_lltime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" >
+
+                    <ImageView
+                        android:id="@+id/log_list_iv_clock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_blog_time" />
+
+                    <TextView
+                        android:id="@+id/log_list_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:text="2h"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dip"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/list_log_ll_pic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" >
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ProgressBar
+                            android:id="@+id/log_list_pb_contentpic"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_marginBottom="8dip"
+                            android:progressDrawable="@drawable/color_pb_long" />
+
+                        <TextView
+                            android:id="@+id/log_list_tv_fail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/blog_pic_fail"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/img_test"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/log_list_tv_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dip"
+                        android:text="33次播放"
+                        android:textColor="#516679"
+                        android:textSize="13sp"
+                        android:visibility="gone" >
+                    </TextView>
+                </LinearLayout>
+                <!-- 上面的View和下面播放声音的LinearLayout应该同时设为可见和不可见，这哥View是用来增加播放模块空白位的 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/list_log_ll_pic"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ic_log_play_board"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/log_list_record_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="&quot;" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp" >
+
+                        <!-- 以下三个元素，根据播放状态设为可见和不可见 -->
+
+                        <ImageView
+                            android:id="@+id/list_log_click_to_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_log_click_to_play"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/list_log_click_to_stop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_log_click_to_stop"
+                            android:visibility="visible" />
+
+                        <ProgressBar
+                            android:id="@+id/ic_log_pb_play"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/log_list_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/list_log_ll_pic"
+                    android:layout_marginLeft="5dip"
+                    android:textColor="#575757"
+                    android:textSize="12.5sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/log_list_llt_person"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF" >
+
+                <TextView
+                    android:id="@+id/log_list_tv_partperson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:text="With:"
+                    android:textColor="#505050"
+                    android:textStyle="bold" />
+
+                <com.chance.ui.freshnews.FreshMyGridView
+                    android:id="@+id/log_gll_part_person"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="#FFFFFF"
+                    android:contentDescription="点击右上角选择参与人"
+                    android:horizontalSpacing="3dip"
+                    android:numColumns="8" />
+
+                <!-- 先把with more这个图片隐藏如果有with的人在出现 需要程序控制 -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/praise" />
+
+                <TextView
+                    android:id="@+id/item_blog_tv_praise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/comment" />
+
+                <TextView
+                    android:id="@+id/item_blog_tv_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/view" />
+
+                <TextView
+                    android:id="@+id/item_blog_tv_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="78" />
+            </LinearLayout>
+
+            <!-- 评论区域 -->
+
+            <LinearLayout
+                android:id="@+id/item_blog_ll_comment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_blog_comment" />
+
+                <LinearLayout
+                    android:id="@+id/log_llt_replay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+               android:gravity="center_vertical|right"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp" >
+                
+                <Button 
+                    android:id="@+id/item_blog_btn_praise"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/praise"
+                    android:paddingLeft="20dp"
+                    android:textColor="#8e8e8e"
+                    android:background="@drawable/btn_blog_add_praise"/>
+                 <Button 
+                    android:id="@+id/item_blog_btn_comment"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/comment"
+                    android:paddingLeft="20dp"
+                    android:textColor="#8e8e8e"
+                    android:background="@drawable/btn_blog_add_comment"/>
+
+                
+            </LinearLayout>
+
+            <!-- 新加的载入日志等待条 -->
+
+            <LinearLayout
+                android:id="@+id/footer_log_ls_loadwait"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:gravity="center_horizontal|center_vertical"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:id="@+id/progressBar_log_loadlog"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/footer_log_tv_load"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

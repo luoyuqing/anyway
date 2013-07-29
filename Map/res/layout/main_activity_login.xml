@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:background="#1aadb8"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:background="#1aadb8" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_login_logo" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#0bc6d4" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/login_fl_avatar"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/btn_login_avatar" >
+
+        <!-- 下面这个VIEW现实用户头像，需要用代码处理成圆形 -->
+
+        <ImageView
+            android:id="@+id/login_iv_avatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/btn_login_avatar" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_fl_avatar"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/login_edit_text_userid"
+            style="@style/login_edittext_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="18dp"
+            android:textColorHint="#0c6970"
+            android:textColor="#0c6970"
+            android:hint="@string/login_text_email"
+            android:inputType="textEmailAddress"
+             />
+
+        <EditText
+            android:id="@+id/login_edit_text_password"
+            style="@style/login_edittext_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="25dp"
+            android:textColorHint="#0c6970"
+            android:textColor="#0c6970"
+            android:hint="@string/login_text_password"
+            android:inputType="textPassword" />
+        <Button 
+            android:id="@+id/login_btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_login_login"
+            android:layout_marginTop="35dp"
+            android:layout_gravity="center_horizontal"/>
+        
+        <LinearLayout 
+            android:id="@+id/login_ll_fpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+            <ImageView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_login_forgetpassword"/>
+            <TextView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="忘记密码?"
+                android:layout_marginLeft="5dp"
+                android:textColor="#468c92"/>
+        </LinearLayout>
+        
+        
+        <LinearLayout 
+            android:id="@+id/login_ll_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+            <ImageView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_login_register"/>
+            <TextView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="注册账号"
+                android:layout_marginLeft="5dp"
+                android:textColor="#468c92"/>
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</RelativeLayout>

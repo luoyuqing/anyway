@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d2f0f2"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d2f0f2" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#d2f0f2"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/register_fl_avatar"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_register_avatar" >
+
+                <!--
+                     下面这个VIEW现实用户头像，需要用代码处理成圆形,
+                                    需要用户上传头像后才显示
+                -->
+
+                <ImageView
+                    android:id="@+id/register_iv_avatar"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/btn_login_avatar"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/register_edit_text_mail"
+                style="@style/login_edittext_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="12dp"
+                android:hint="@string/register_text_email"
+                android:inputType="text"
+                android:textColor="#0c6970"
+                android:textColorHint="#0c6970"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/register_edit_text_password"
+                style="@style/login_edittext_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="8dp"
+                android:hint="@string/register_text_password"
+                android:inputType="textPassword"
+                android:textColor="#0c6970"
+                android:textColorHint="#0c6970"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/register_edit_text_confirmpassword"
+                style="@style/login_edittext_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="8dp"
+                android:hint="@string/register_text_confirm_password"
+                android:inputType="textPassword"
+                android:textColor="#0c6970"
+                android:textColorHint="#0c6970"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/register_edit_text_nickname"
+                style="@style/login_edittext_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="8dp"
+                android:hint="@string/register_text_nickname"
+                android:inputType="text"
+                android:maxEms="10"
+                android:textColor="#0c6970"
+                android:textColorHint="#0c6970"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/register_rg_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/register_radioButton_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radiobutton_register_gender"
+                    android:drawableLeft="@drawable/radiobutton_register_gender"
+                    android:paddingLeft="25dp"
+                    android:text="@string/male"
+                    android:textColor="#26aab5"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/register_radioButton_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    android:button="@drawable/radiobutton_register_gender"
+                    android:checked="true"
+                    android:paddingLeft="25dp"
+                    android:text="@string/female"
+                    android:textColor="#26aab5"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/register_edit_text_birthday"
+                style="@style/login_edittext_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/register_text_birthday"
+                android:inputType="date"
+                android:textColor="#0c6970"
+                android:textColorHint="#0c6970"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/register_edit_text_phone"
+                style="@style/login_edittext_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="8dp"
+                android:hint="@string/register_text_phone"
+                android:inputType="phone"
+                android:textColor="#0c6970"
+                android:textColorHint="#0c6970"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/register_ll_vehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_text_car"
+                    android:textColor="#0c6970"
+                    android:textSize="13sp" />
+
+                <!--
+                请在以下checkbox上放个监听，如果为checked，
+                保留已填信息，跳转到activity_register_vehicle.xml
+                车辆信息填好后，点击提交按钮又返回此界面
+
+                -->
+
+                <CheckBox
+                    android:id="@+id/checkbox_register"
+                    style="@style/RegisterCheckBox"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:checked="false" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/register_btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_register_register" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

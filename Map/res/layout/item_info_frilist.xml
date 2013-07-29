@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#7f7f7f"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:paddingTop="5dp" >
+
+    <!-- 以下LL显示首字母 -->
+
+    <LinearLayout
+        android:id="@+id/info_frilist_letter_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/bg_info_frilist_title" >
+        <TextView 
+            android:id="@+id/info_frilist_letter_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+        <LinearLayout
+        android:id="@+id/info_frilist_name_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_info_frilist_name" >
+        <TextView 
+            android:id="@+id/info_frilist_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adobe"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

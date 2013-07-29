@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_ll_02"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#e5e5e5"
+    android:orientation="vertical" >
+
+  <TextView
+        android:id="@+id/chat_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+       
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:id="@+id/chat_item_to_relativelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+         >
+         <!-- 消息发送状态 -->
+              <TextView
+            android:id="@+id/chat_state_tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           
+            android:text="失败"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            android:textSize="12sp" />
+              <!-- 聊天文本内容 -->
+                 <TextView
+                android:id="@+id/chat_content_to_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/chat_item_to_img"
+                android:background="@drawable/chatto_bg_chat"
+                android:gravity="center_vertical"
+                android:maxWidth="200dip"
+                android:minHeight="50dip"
+                android:minWidth="50dip"
+                android:paddingLeft="12dip"
+                android:paddingRight="18dip"
+                android:shadowColor="#C0C0C0"
+                android:shadowDx="10"
+                android:shadowDy="10"
+                android:textColor="#000000"
+                android:textSize="16sp" >
+            </TextView>
+            <!-- 聊天图片或者地图 -->
+                 <FrameLayout
+                android:id="@+id/chat_content_to_rl_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chatto_fg_chat"
+                 >
+
+                <ImageView
+                    android:id="@+id/chat_content_to_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name" >
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/chat_content_to_ll_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#77ffffff"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ProgressBar
+                        android:id="@+id/chat_content_to_pb_img"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/chat_content_to_tv_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12%"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </FrameLayout>
+            <!-- 语音及其时间 -->
+                     <ImageView
+                android:id="@+id/chat_content_to_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chatto_bg_chat"
+                android:maxWidth="150dip"
+                android:minHeight="50dip"
+                android:minWidth="50dip"
+                android:paddingLeft="20dip"
+                android:paddingRight="10dip"
+                android:shadowColor="#C0C0C0" />
+         <TextView
+                android:id="@+id/chat_time_tv_vedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="6&apos;&apos;" />
+
+             <LinearLayout
+                android:id="@+id/chat_content_llt_vedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                  android:maxWidth="150dip"
+                android:minHeight="50dip"
+                android:minWidth="50dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                   android:background="@drawable/chatto_bg_chat"
+                 >
+
+                <ImageView
+                    android:id="@+id/chat_content_img_vedio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_chatto_voice_playing" >
+                </ImageView>
+ 
+               
+                
+            </LinearLayout>
+            <!--  -->
+              <!-- 用户图像 -->
+               <ImageView
+                android:id="@+id/chat_item_to_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dip"
+                android:layout_gravity="right"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/avatar02" />
+              
+    </LinearLayout>
+    </LinearLayout>

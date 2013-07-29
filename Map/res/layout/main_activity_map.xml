@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/map_rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_main_title" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_title_map" />
+    </RelativeLayout>
+
+    <!-- 以下的layout是用来装预警和3D路况的 -->
+
+    <LinearLayout
+        android:id="@+id/map_ll_events"
+        android:layout_width="fill_parent"
+        android:layout_height="90dip"
+        android:layout_below="@id/map_rl_title"
+        android:visibility="gone" 
+        android:orientation="vertical">
+
+        <!-- 把预警和路况放到这个位置 -->
+
+    </LinearLayout>
+
+    <!-- 下面这一块放地图API给的view，我这里是随便放的，请替换一下 长宽和margin的数据不要改变 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/map_rl_title" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" >
+        </com.baidu.mapapi.map.MapView>
+        <Button 
+            android:id="@+id/map_btn_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_map_top_loc"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+         <Button 
+            android:id="@+id/map_btn_eve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_map_top_eve"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

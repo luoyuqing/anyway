@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d4f1f4"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/register_vehicle_fl_avatar"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_register_vehicle_avatar" >
+
+        <!-- 下面这个VIEW现实用户车辆头像，需要用代码处理成圆形,需要用户上传头像后才显示 -->
+
+        <ImageView
+            android:id="@+id/register_vehicle_iv_avatar"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:src="@null"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/register_vehicle_text_manufacturer"
+        style="@style/login_edittext_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="15dp"
+        android:hint="@string/register_vehicle_manufacturer"
+        android:inputType="text"
+        android:textColor="#0c6970"
+        android:textColorHint="#0c6970"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/register_vehicle_text_model"
+        style="@style/login_edittext_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/register_vehicle_model"
+        android:inputType="text"
+        android:textColor="#0c6970"
+        android:textColorHint="#0c6970"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/register_vehicle_text_color"
+        style="@style/login_edittext_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/register_vehicle_color"
+        android:inputType="text"
+        android:textColor="#0c6970"
+        android:textColorHint="#0c6970"
+        android:textSize="14sp" />
+    <EditText
+        android:id="@+id/register_vehicle_text_number"
+        style="@style/login_edittext_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/register_vehicle_number"
+        android:inputType="text"
+        
+        android:textColor="#0c6970"
+        android:textColorHint="#0c6970"
+        android:textSize="14sp" />
+    
+    
+    <Button 
+                android:id="@+id/register_vehicle_btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/btn_vehicle_register"/>
+
+</LinearLayout>

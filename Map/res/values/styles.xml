@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    <style name="login_edittext_style" parent="@android:style/Widget.EditText">
+                <item name="android:background">@drawable/edittext_bg_login</item>
+            </style>
+            
+    <style name="RegisterCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+		<item name="android:button">@drawable/checkbox_register</item>
+	</style>
+	
+    <style name="NbsCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+		<item name="android:button">@drawable/checkbox_nbs</item>
+	</style>
+	
+    <style name="chat_edittext_style" parent="@android:style/Widget.EditText">
+                <item name="android:background">@drawable/bg_frame_edittext</item>
+            </style>
+            
+
+</resources>

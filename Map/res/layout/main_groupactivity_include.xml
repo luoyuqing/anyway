@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- top direct column :return &&radar and title of the activity UI -->
+    <!-- 中间动态加载View -->
+
+    <LinearLayout
+        android:id="@+id/group_include_containerBody"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#eeeeee" >
+    </LinearLayout>
+
+    <!-- 底部导航栏 -->
+
+    <TableLayout
+        android:id="@+id/group_include_home_table_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/group_include_btn_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_map_selected"
+                android:gravity="bottom|center" />
+
+            <Button
+                android:id="@+id/group_include_btn_social"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_social_normal"
+                android:gravity="bottom|center" />
+
+            <Button
+                android:id="@+id/group_include_btn_trip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_trip_normal"
+                android:gravity="bottom|center" />
+
+           
+
+                <Button
+                    android:id="@+id/group_include_btn_event"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_event_normal" 
+                    android:gravity="bottom|center" />
+            
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

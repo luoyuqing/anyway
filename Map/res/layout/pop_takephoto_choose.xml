@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+    
+    <LinearLayout 
+        android:id="@+id/choose_ll_takephoto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/bg_takephoto_choose">
+        
+        <Button 
+            android:id="@+id/choose_btn_takephoto_take"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_takephoto_choose"
+            android:text="@string/takephoto"
+            android:textSize="18sp"
+           
+            android:textColor="#262626"/>
+        <Button 
+            android:id="@+id/choose_btn_takephoto_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_takephoto_choose"
+            android:text="@string/album"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#262626"/>
+        <Button 
+            android:id="@+id/cancle_btn_takephoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_takephoto_cancle"
+            android:text="@string/cancle"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#c0c9c9"/>
+        
+    </LinearLayout>
+    
+
+</RelativeLayout>
