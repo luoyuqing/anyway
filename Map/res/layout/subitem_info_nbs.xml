@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:id="@+id/ll_subitem_info_nbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_info_nbs_name"
+        android:orientation="horizontal">
+        <ImageButton 
+            android:id="@+id/ibtn_info_nbs_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fr_info_nbs_avatar"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"/>
+        <TextView 
+            android:id="@+id/tv_info_nbs_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="刘大邦"
+            android:textColor="#00b0f0"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_marginLeft="8dp"
+            android:ems="4"
+            android:ellipsize="end"/>
+    </LinearLayout>
+
+</LinearLayout>
