@@ -51,7 +51,44 @@
         </LinearLayout>
     </RelativeLayout>
 
-    
+    <LinearLayout
+        android:id="@+id/info_frilist_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info_rlt_title"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <EditText
+            android:id="@+id/info_frilist_search_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_search_bar" >
+        </EditText>
+        <Button 
+            android:id="@+id/info_frilist_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="go"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:background="@drawable/btn_info_search_go"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/info_frilist_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/info_frilist_search"
+        android:cacheColorHint="#7f7f7f"
+        android:divider="#7f7f7f"
+        android:fadingEdge="none"
+        android:visibility="visible"
+        android:scrollingCache="false" />
 
     <ListView
         android:id="@+id/info_listview"
@@ -61,6 +98,7 @@
         android:cacheColorHint="#7f7f7f"
         android:divider="#7f7f7f"
         android:fadingEdge="none"
+        android:visibility="visible"
         android:scrollingCache="false" />
 
 </RelativeLayout>
