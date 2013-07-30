@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#7f7f7f"
     android:orientation="vertical" >
 
     <LinearLayout
         android:id="@+id/text_log_list_new"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#FFFFFF"
+        android:background="#7f7f7f"
         android:orientation="vertical" >
 
         <RelativeLayout
@@ -24,7 +24,7 @@
                 android:layout_width="40dip"
                 android:layout_height="40dip"
                 android:layout_marginTop="0dp"
-                android:src="@drawable/avatar_blog" >
+                android:src="@drawable/bg_fr_avatar" >
             </ImageView>
 
             <RelativeLayout
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dip"
             android:layout_marginTop="5dp"
-            android:background="#ffffff"
+            android:background="#7f7f7f"
             android:orientation="vertical"
             android:paddingLeft="1dp"
             android:paddingRight="1dp" >
@@ -116,6 +116,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp" >
 
@@ -232,7 +233,7 @@
                 android:id="@+id/log_list_llt_person"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF" >
+                android:background="#7f7f7f" >
 
                 <TextView
                     android:id="@+id/log_list_tv_partperson"
@@ -331,7 +332,7 @@
             </LinearLayout>
             
             <LinearLayout
-               android:gravity="center_vertical|right"
+               android:gravity="center_vertical|left"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -344,18 +345,14 @@
                     android:id="@+id/item_blog_btn_praise"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="@string/praise"
-                    android:paddingLeft="20dp"
-                    android:textColor="#8e8e8e"
+                    
                     android:background="@drawable/btn_blog_add_praise"/>
                  <Button 
                     android:id="@+id/item_blog_btn_comment"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:text="@string/comment"
-                    android:paddingLeft="20dp"
-                    android:textColor="#8e8e8e"
+                    
                     android:background="@drawable/btn_blog_add_comment"/>
 
                 

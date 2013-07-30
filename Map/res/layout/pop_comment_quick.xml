@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:background="#b5555555"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/comment_quick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/comment_quick_ll_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_blog_comment"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/comment_quick_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/back"
+                android:background="@drawable/btn_blog_comment_back" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dip"
+                android:gravity="center_horizontal" >
+
+                
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:text="Comment"
+                    android:textColor="#e7eef1"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/comment_quick_iv_close"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_blog_comment_close" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/comment_quick_ll_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comment_quick_ll_title"
+            android:background="@drawable/bg_chat_bottom"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+           <!--  <Button
+                android:id="@+id/comment_quick_btn_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_marginTop="3dip"
+                android:background="@drawable/btn_chat_more" >
+            </Button>
+
+            <Button
+                android:id="@+id/comment_quick_btn_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_marginTop="2dip"
+                android:layout_toRightOf="@id/comment_quick_btn_more"
+                android:background="@drawable/audio_btn_chat" >
+            </Button> -->
+            
+             <Button
+            android:id="@+id/comment_quick_btn_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="2dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_blog_comment_face" >
+        </Button>
+
+            <Button
+                android:id="@+id/comment_quick_btn_submitComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_blog_comment_send"
+                >
+            </Button>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_toLeftOf="@id/comment_quick_btn_submitComment"
+                android:layout_toRightOf="@id/comment_quick_btn_face" >
+
+                <EditText
+                    android:id="@+id/comment_quick_et_commentContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="4dip"
+                    android:background="@drawable/bg_frame_edittext"
+                    android:hint="说点什么吧"
+                    android:paddingLeft="15dip"
+                    android:textColor="#afafaf"
+                    android:textSize="16sp" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/comment_quick_tv_wordsNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="5dip"
+                    android:text="0/120"
+                    android:textColor="#86a8cb"
+                    android:textSize="16sp" />
+            </FrameLayout>
+
+          <!--   <LinearLayout
+                android:id="@+id/comment_quick_llt_vedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="4dip"
+                android:layout_toRightOf="@id/comment_quick_btn_voice"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/comment_quick_down_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/chat_tinput_btn_hei"
+                    android:background="@drawable/btn_chat_down"
+                    android:shadowColor="#000000"
+                    android:text="@string/chat_btn_vioce"
+                    android:textSize="15sp" >
+                </Button>
+            </LinearLayout> -->
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

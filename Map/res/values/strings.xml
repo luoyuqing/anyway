@@ -37,6 +37,8 @@
     <string name="report_collapse">塌方</string>
     <string name="report_jam">堵车</string>
     <string name="report_limit">限行</string>
+    <string name="report_danger">危险</string>
+    <string name="report_work">施工</string>
     <string name="report_monitoring">监控</string>
     <string name="report_accident">事故</string>
     <string name="report_sign">签到</string>

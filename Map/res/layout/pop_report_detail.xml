@@ -29,7 +29,7 @@
 
                 <!--
                 以下图片和文字根据选择的选项替换 警察，塌方，事故等等，drawable里面有图@drawable/ic_report_detail_XXXX
-                string里面有相应文字@string/report_XXX
+                string里面有相应文字@string/report_XXX
                 -->
 
                 <ImageView
