@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" >
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/bg_main_title" >
+		
+	    <Button 
+	        android:id="@+id/nbs_btn_back"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/btn_chat_top_back"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"/>
+
+		<TextView
+			android:id="@+id/nbs_tv_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:text="NBS"
+			android:textColor="#00b0f0"
+			android:textSize="20sp"
+			android:textStyle="bold" />
+	</RelativeLayout>
+
+	<ListView
+	    
+		android:id="@+id/nbs_list"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:cacheColorHint="#e5e5e5"
+		android:background="#7f7f7f"
+		android:fadingEdge="none" >
+	</ListView>
+
+</LinearLayout>
