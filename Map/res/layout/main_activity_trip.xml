@@ -22,8 +22,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:src="@drawable/ic_title_map" />
-
-  
         </LinearLayout>
     </RelativeLayout>
 
@@ -32,15 +30,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/trip_rlt_title"
+        android:gravity="center_horizontal"
         android:orientation="vertical" 
-        android:gravity="center_horizontal">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <Button
             android:id="@+id/trip_ll_nbs"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/btn_trip_nbs"
             android:text="@string/trip_title_nbs"
             android:textColor="#ffffff"
@@ -49,10 +49,10 @@
 
         <Button
             android:id="@+id/trip_ll_blog"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/btn_trip_blog"
             android:text="@string/trip_title_blog"
             android:textColor="#ffffff"
@@ -61,10 +61,10 @@
 
         <Button
             android:id="@+id/trip_ll_des"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/btn_trip_des"
             android:text="@string/trip_title_des"
             android:textColor="#ffffff"
@@ -72,134 +72,40 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <com.chance.ui.freshnews.FreshMyGridView
-        android:id="@+id/trip_gridview_partener"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginLeft="5dp"
-        android:numColumns="6"
-        android:spacing="2dp"
-        android:layout_marginBottom="40dp"
-        android:visibility="visible" />
-
-    <!--
     <LinearLayout
-        android:id="@+id/trip_ll_nbs"
+        android:id="@+id/trip_ll_nbs_with"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_item"
+        android:layout_below="@id/trip_ll_btn"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_trip_with"
         android:paddingBottom="5dp"
         android:paddingLeft="13dp"
         android:paddingRight="13dp"
         android:paddingTop="5dp" >
 
-        <ImageView
+        <com.chance.ui.freshnews.FreshMyGridView
+            android:id="@+id/trip_gridview_partener"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="40dp"
+            android:numColumns="auto_fit"
+            android:spacing="2dp"
+            android:visibility="visible" />
+        <TextView 
+            android:id="@+id/tv_trip_with_go"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_trip_nbs" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20dp"
-            android:text="@string/trip_title_nbs"
+            android:text="Let us goooooooo!!!"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center_horizontal"
             android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textSize="20sp"
+            />
     </LinearLayout>
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#cbcaca" />
-
-    <LinearLayout
-        android:id="@+id/trip_ll_mate"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_item"
-        android:paddingBottom="5dp"
-        android:paddingLeft="13dp"
-        android:paddingRight="13dp"
-        android:paddingTop="5dp" >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_trip_mate" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20dp"
-            android:text="@string/trip_title_mate"
-            android:textColor="#000000"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#cbcaca" />
-
-    <LinearLayout
-        android:id="@+id/trip_ll_blog"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_item"
-        android:paddingBottom="5dp"
-        android:paddingLeft="13dp"
-        android:paddingRight="13dp"
-        android:paddingTop="5dp" >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_trip_blog" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20dp"
-            android:text="@string/trip_title_blog"
-            android:textColor="#000000"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#cbcaca" />
-
-    <LinearLayout
-        android:id="@+id/trip_ll_des"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_item"
-        android:paddingBottom="5dp"
-        android:paddingLeft="13dp"
-        android:paddingRight="13dp"
-        android:paddingTop="5dp" >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_trip_des" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20dp"
-            android:text="@string/trip_title_des"
-            android:textColor="#000000"
-            android:textSize="18sp" />
-    </LinearLayout>
-    -->
 
 </RelativeLayout>

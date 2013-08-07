@@ -34,6 +34,7 @@
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
 		android:cacheColorHint="#e5e5e5"
+		android:divider="#7f7f7f"
 		android:background="#7f7f7f"
 		android:fadingEdge="none" >
 	</ListView>
