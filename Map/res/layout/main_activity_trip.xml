@@ -87,7 +87,8 @@
         android:paddingRight="13dp"
         android:paddingTop="5dp" >
 
-        <com.chance.ui.freshnews.FreshMyGridView
+        <!-- <com.chance.ui.freshnews.FreshMyGridView -->
+        <com.willdriving3display.layout.MyGridView
             android:id="@+id/trip_gridview_partener"
             android:layout_width="wrap_content"
             android:layout_height="50dp"

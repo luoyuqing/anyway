@@ -124,7 +124,8 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <com.chance.ui.layout.PullLoadListView
+    <!-- <com.chance.ui.layout.PullLoadListView -->
+    <com.willdriving3display.layout.PullListView
         android:id="@+id/chat_text_listview_content"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

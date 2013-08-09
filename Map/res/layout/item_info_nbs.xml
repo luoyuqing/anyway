@@ -9,7 +9,8 @@
     android:paddingRight="5dp"
     android:paddingTop="5dp">
     <!-- 这个item的list请复用activity_info_msg_notify -->
-    <GridView 
+    <!-- <GridView  -->
+    <com.willdriving3display.layout.MyGridView
         android:id="@+id/gv_info_nbs"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -21,6 +22,6 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="5dp"
-        android:paddingBottom="5dp"></GridView>
+        android:paddingBottom="5dp" />
 
 </LinearLayout>
