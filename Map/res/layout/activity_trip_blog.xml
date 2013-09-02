@@ -46,6 +46,7 @@
         android:dividerHeight="1dip"
         android:divider="@drawable/bg_line_dashed"
         android:fadingEdge="none"
-        android:scrollingCache="false" />
+        android:scrollingCache="false" 
+        android:descendantFocusability="beforeDescendants"/>
 
 </LinearLayout>

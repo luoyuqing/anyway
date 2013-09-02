@@ -147,7 +147,7 @@
                             android:layout_height="wrap_content" />
                     </FrameLayout>
 
-                    <TextView
+                   <!--  <TextView
                         android:id="@+id/log_list_tv_play"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -158,11 +158,11 @@
                         android:textColor="#516679"
                         android:textSize="13sp"
                         android:visibility="gone" >
-                    </TextView>
+                    </TextView> -->
                 </LinearLayout>
                 <!-- 上面的View和下面播放声音的LinearLayout应该同时设为可见和不可见，这哥View是用来增加播放模块空白位的 -->
 
-                <LinearLayout
+               <!--  <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@id/list_log_ll_pic"
@@ -192,7 +192,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="5dp" >
 
-                        <!-- 以下三个元素，根据播放状态设为可见和不可见 -->
+                        以下三个元素，根据播放状态设为可见和不可见
 
                         <ImageView
                             android:id="@+id/list_log_click_to_play"
@@ -217,7 +217,7 @@
                             android:layout_height="wrap_content"
                             android:visibility="visible" />
                     </FrameLayout>
-                </LinearLayout>
+                </LinearLayout> -->
 
                 <TextView
                     android:id="@+id/log_list_content"
@@ -245,7 +245,8 @@
                     android:textColor="#505050"
                     android:textStyle="bold" />
 
-                <com.chance.ui.freshnews.FreshMyGridView
+                <!-- <com.chance.ui.freshnews.FreshMyGridView -->
+                <com.willdriving3display.layout.MyGridView
                     android:id="@+id/log_gll_part_person"
                     android:layout_width="fill_parent"
                     android:layout_height="50dp"

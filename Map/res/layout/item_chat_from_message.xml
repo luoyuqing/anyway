@@ -61,7 +61,8 @@
             android:minWidth="50dip"
             android:paddingLeft="20dip"
             android:paddingRight="10dip"
-            android:shadowColor="#C0C0C0" />
+            android:shadowColor="#C0C0C0" 
+            android:visibility="gone"/>
 
        
               <FrameLayout
