@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" 
+    android:background="#ffffff"
     >
 
     <LinearLayout
@@ -26,26 +27,26 @@
                 android:id="@+id/btn_report_menu_cop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_report"
-                android:text="@string/report_cop"
+                android:background="@drawable/btn_report_cop"
+               
                 android:textColor="#000000"
                 android:textSize="18sp" />
             <Button
                 android:id="@+id/btn_report_menu_collapse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_report"
+                android:background="@drawable/btn_report_collapse"
                 android:text="@string/report_collapse"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="8dp"
                 android:textColor="#000000"
                 android:textSize="18sp" />
              <Button
                 android:id="@+id/btn_report_menu_jam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_report"
-                android:text="@string/report_jam"
-                android:layout_marginLeft="15dp"
+                android:background="@drawable/btn_report_jam"
+              
+                android:layout_marginLeft="8dp"
                 android:textColor="#000000"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -53,32 +54,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp" >
+            android:layout_marginTop="6dp" >
 
             <Button
                 android:id="@+id/btn_report_menu_limit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_report"
-                android:text="@string/report_limit"
+                android:background="@drawable/btn_report_limit"
+               
                 android:textColor="#000000"
                 android:textSize="18sp" />
             <Button
                 android:id="@+id/btn_report_menu_monitoring"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_report"
-                android:text="@string/report_monitoring"
-                android:layout_marginLeft="15dp"
+                android:background="@drawable/btn_report_monitoring"
+                
+                android:layout_marginLeft="8dp"
                 android:textColor="#000000"
                 android:textSize="18sp" />
              <Button
                 android:id="@+id/btn_report_menu_accident"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_report"
-                android:text="@string/report_accident"
-                android:layout_marginLeft="15dp"
+                android:background="@drawable/btn_report_accident"
+              
+                android:layout_marginLeft="8dp"
                 android:textColor="#000000"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -86,33 +87,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="6dp"
             android:layout_marginBottom="10dp" >
 
             <Button
                 android:id="@+id/btn_report_menu_work"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_report"
-                android:text="@string/report_work"
+                android:background="@drawable/btn_report_work"
+       
                 android:textColor="#000000"
                 android:textSize="18sp" />
             <Button
                 android:id="@+id/btn_report_menu_danger"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_report"
-                android:text="@string/report_danger"
-                android:layout_marginLeft="15dp"
+                android:background="@drawable/btn_report_danger"
+             
+                android:layout_marginLeft="8dp"
                 android:textColor="#000000"
                 android:textSize="18sp" />
              <Button
                 android:id="@+id/btn_report_menu_sign"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_report"
-                android:text="@string/report_sign"
-                android:layout_marginLeft="15dp"
+                android:background="@drawable/btn_report_sign"
+            
+                android:layout_marginLeft="8dp"
                 android:textColor="#000000"
                 android:textSize="18sp" />
         </LinearLayout>
